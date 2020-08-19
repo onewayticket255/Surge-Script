@@ -12,7 +12,7 @@ $httpClient.get(api, (error, response, body) => {
     console.log(body)
     body = JSON.parse(body)
     let info = ""
-    body['data']['vlist'].forEach((element, index) => {
+    body['data']['list']['vlist'].forEach((element, index) => {
       index++
       let scheme = `bilibili://av/${element['aid']}`
       info += index + ": " + element['title'] + "\n" + scheme + "\n"
